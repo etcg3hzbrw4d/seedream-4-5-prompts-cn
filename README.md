@@ -10,18 +10,20 @@
   <img src="assets/01-product-hero-perfume.jpg" width="820" alt="Sample render via the APIMart image API">
 </p>
 
-> **from $0.026 per image** — one OpenAI-compatible endpoint at `https://api.apimart.ai/v1`, no monthly plan required. *(observed 2026-10-12)*
+> **from $0.026 per image** — 一个 OpenAI 兼容端点 `https://api.apimart.ai/v1`，无需包月套餐。*(数据观测于 2026-10-12)*
 
-**[Get an API key](https://go.apimart.ai/k-27b74c)** · **[Live pricing](https://go.apimart.ai/k-21542f)** · **[Model page](https://go.apimart.ai/k-23b69b)** · [⚡ 60-second quickstart](#run-a-recipe-yourself)
+**[Get an API key](https://go.apimart.ai/k-27b74c)** · **[Live pricing](https://go.apimart.ai/k-21542f)** · **[Model page](https://go.apimart.ai/k-23b69b)** · [⚡ 60-second quickstart](#quickstart)
 
-**Why teams call Seedream 4.5 (`seedream-4-5`) through APIMart**
+**为什么团队通过 APIMart 调用 Seedream 4.5（`seedream-4-5`）**
 
-- **One key, entire catalog.** The same `https://api.apimart.ai/v1` base URL and `Authorization` header reach Seedream 4.5 (`seedream-4-5`) and 300+ other image, video and language models — switch the `model` field, not your client.
-- **$1 minimum, pay as you go.** No subscription and no prepaid plan to size up front: top up from $1 and spend it on calls. There is no free quota to burn through first, so the price in this table is the price you pay.
-- **The charge comes back in the response.** Every call reports the amount billed (`cost` / `credits_cost`), so a spend number is read per call instead of guessed at month end.
-- **Async by design.** Submit, take the `task_id`, poll `GET /v1/tasks/{id}` — batching and retries are ordinary queue work, not a bespoke integration.
+- **一个 Key，整个目录。**同一个 `https://api.apimart.ai/v1` base URL 和 `Authorization` 请求头即可访问 Seedream 4.5（`seedream-4-5`）以及图像、视频、语言等 300+ 模型——只需切换 `model` 字段，客户端无需改动。
+- **$1 起充，按量付费。**没有订阅、也没有需要预先估算用量的预付费套餐：最低充值 $1，调用多少扣多少。
+- **费用随响应一并返回。**每个完成的任务都会报告实际计费金额（`cost` / `credits_cost`）；状态为 `failed` 的任务会自动退款。
+- **原生异步设计。**提交任务、拿到 `task_id`、轮询 `GET /v1/tasks/{id}`——批处理和重试都是普通的队列工作，不需要定制集成。
 
 <!-- /conv-kit:v1 -->
+
+**中文环境也叫:** 即梦图片
 
 Eight **Seedream 4.5 prompts** listed with an example render, the ratio, and what the call costs on this route. Copy a recipe, keep the structure, swap the subject.
 
@@ -98,6 +100,17 @@ Because ratio is a layout decision, not a style one: 1:1 for catalogue and icons
 **Can I use a recipe as a template for another subject?**
 
 That is the point. Keep the structure (subject + light + framing + setting + finish) and replace the subject; changing everything at once makes it impossible to tell which phrase moved the output.
+
+<!-- related-repos:auto -->
+## Related repositories
+
+- **Same model, this language** — the other half of this pair: [seedream-4-5-api-cn](https://github.com/etcg3hzbrw4d/seedream-4-5-api-cn)
+- **Same model, other languages** — 9 more language builds: Deutsch [seedream-4-5-api-de](https://github.com/q3zkzqq3f/seedream-4-5-api-de) · Español [seedream-4-5-api-es](https://github.com/kxoboq/seedream-4-5-api-es) · Français [seedream-4-5-api-fr](https://github.com/nhpm6vg83se/seedream-4-5-api-fr) · Relay/gateway `seedream-4-5-api-gateway` · Bahasa `seedream-4-5-api-id` · 日本語 `seedream-4-5-api-ja` · 한국어 [seedream-4-5-api-ko](https://github.com/ucy7hfyqm/seedream-4-5-api-ko) · Português [seedream-4-5-api-pt](https://github.com/d4qb-s4y087m/seedream-4-5-api-pt) · Русский [seedream-4-5-api-ru](https://github.com/f3i936/seedream-4-5-api-ru)
+- **More models in this language** — [midjourney-api-cn](https://github.com/apimartycl6k972t/midjourney-api-cn) · [gemini-2-5-flash-image-preview-api-cn](https://github.com/hm-5j/gemini-2-5-flash-image-preview-api-cn) · [nano-banana-api-cn](https://github.com/mpflv/nano-banana-api-cn) · [gemini-3-1-flash-image-preview-api-cn](https://github.com/utp00/gemini-3-1-flash-image-preview-api-cn) · [nano-banana-2-api-cn](https://github.com/i3hxnu6/nano-banana-2-api-cn) · [gemini-3-pro-image-preview-api-cn](https://github.com/vd0tv42d/gemini-3-pro-image-preview-api-cn)
+- **Topic hubs** — every build of this model, all languages: [seedream-4-5](https://github.com/topics/seedream-4-5) · [seedream-4-5-api](https://github.com/topics/seedream-4-5-api)
+
+This repository is one build in a cross-linked set of API guides for the same model family; each language build links back to the others.
+<!-- /related-repos:auto -->
 
 ## Attributed links (how this repository is measured)
 
